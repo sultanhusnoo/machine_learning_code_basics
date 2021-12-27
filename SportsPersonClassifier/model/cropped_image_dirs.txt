@@ -1,0 +1,1 @@
+["./dataset/cropped/yuliya_levchenko", "./dataset/cropped/lionel_messi", "./dataset/cropped/serena_williams", "./dataset/cropped/virat_kohli", "./dataset/cropped/maria_sharapova", "./dataset/cropped/roger_federer"]
