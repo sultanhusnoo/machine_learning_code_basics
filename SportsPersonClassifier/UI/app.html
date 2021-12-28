@@ -12,11 +12,128 @@
     </head>
 
     <body>
+        <nav class = 'navbar navbar-dark bg-dark justify-content-center' 
+            style = "text-decoration: none; color:white;">
+            <h4><b><a class = 'navbar-brand' href='#'>Sports Person Classifier</a></b></h4>
+        </nav>
 
-
-
+        <div class='container pt-3'>
+            <div class = 'row'>
+                <div class = 'col card-wrapper' data-player='yuliya-levchenko'>
+                    <div class = 'card border-0'>
+                        <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
+                            <img class = 'w-100 h-100' src='./images/yuliya.jpeg' alt = 'Card image Cap'>        
+                        </div>
+                        <div class = 'card-body text-center mt-4'>
+                            <h6 class = 'text-uppercase card-title'>
+                                <b>Yuliya Levchenko</b>
+                            </h6>        
+                        </div>
+                    </div>
+                </div>
+                <div class = 'col card-wrapper' data-player='lionel-messi'>
+                    <div class = 'card border-0'>
+                        <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
+                            <img class = 'w-100 h-100' src='./images/messi.jpeg' alt = 'Card image Cap'>        
+                        </div>
+                        <div class = 'card-body text-center mt-4'>
+                            <h6 class = 'text-uppercase card-title'>
+                                <b>Lionel Messi</b>
+                            </h6>        
+                        </div>
+                    </div>
+                </div>
+                <div class = 'col card-wrapper' data-player='maria-sharapova'>
+                    <div class = 'card border-0'>
+                        <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
+                            <img class = 'w-100 h-100' src='./images/sharapova.jpeg' alt = 'Card image Cap'>        
+                        </div>
+                        <div class = 'card-body text-center mt-4'>
+                            <h6 class = 'text-uppercase card-title'>
+                                <b>Maria Sharapova</b>
+                            </h6>        
+                        </div>
+                    </div>
+                </div>
+                <div class = 'col card-wrapper' data-player='virat-kohli'>
+                    <div class = 'card border-0'>
+                        <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
+                            <img class = 'w-100 h-100' src='./images/virat.jpeg' alt = 'Card image Cap'>        
+                        </div>
+                        <div class = 'card-body text-center mt-4'>
+                            <h6 class = 'text-uppercase card-title'>
+                                <b>Virat Kohli</b>
+                            </h6>        
+                        </div>
+                    </div>
+                </div>
+                <div class = 'col card-wrapper' data-player='roger-federer'>
+                    <div class = 'card border-0'>
+                        <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
+                            <img class = 'w-100 h-100' src='./images/federer.jpeg' alt = 'Card image Cap'>        
+                        </div>
+                        <div class = 'card-body text-center mt-4'>
+                            <h6 class = 'text-uppercase card-title'>
+                                <b>Roger Federer</b>
+                            </h6>        
+                        </div>
+                    </div>
+                </div>
+                <div class = 'col card-wrapper' data-player='serena-williams'>
+                    <div class = 'card border-0'>
+                        <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
+                            <img class = 'w-100 h-100' src='./images/serena.jpeg' alt = 'Card image Cap'>        
+                        </div>
+                        <div class = 'card-body text-center mt-4'>
+                            <h6 class = 'text-uppercase card-title'>
+                                <b>Serena Williams</b>
+                            </h6>        
+                        </div>
+                    </div>
+                </div>
+            </div>
         
-    </body>
+            <div class = 'row'>
 
+                <div class = 'col-sm-4'>
+                    <div class = 'row'>
+                        <div class = 'col-12 mx-auto'>
+                            <form action = '/file-upload' class = 'dropzone' id='dropzone'>
+                                <div class = 'dz-message needsclick'>
+                                    <img src='./images/upload.png' width="50vw" height="50vw"><br>
+                                    <span class = 'note needsclick'>Drop files here or click to upload</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class = 'row mt-3'>
+                        <div class = 'col-3 mx-auto'>
+                            <button id='submitBtn' type='button' class = 'btn btn-success'>Classify</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = 'col-sm-8' id='error'>
+                    <p>Can't classify image. Classifier was not able to detect a face and two eyes.</p>
+                </div>
+
+                <div class='col-sm-4' id='resultsholder'>
+                </div>
+
+                <div class = 'col-sm-4' id='divClassTable'>
+                    <table id='classTable'>
+                        <tr>    <th>Player</th>     <th>Probability Score</th>  </tr>
+                        <tr>    <td>Yuliya Levchenko</td>   <td id='score_yuliya_levchenko'></td></tr>
+                        <tr>    <td>Lionel Messi    </td>   <td id='score_lionel_messi'></td>   </tr>
+                        <tr>    <td>Maria Sharapova </td>   <td id='score_maria_sharapova'></td></tr>
+                        <tr>    <td>Virat Kohli     </td>   <td id='score_virat_kohli'></td>    </tr>
+                        <tr>    <td>Roger Federer   </td>   <td id='score_roger_federer'></td>  </tr>
+                        <tr>    <td>Serena Williams </td>   <td id='score_serena_williams'></td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </body>
 
 </html>

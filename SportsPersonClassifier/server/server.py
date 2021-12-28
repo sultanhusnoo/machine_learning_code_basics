@@ -11,7 +11,6 @@ def classify_image():
     response.headers.add('Access-Control-Allow-Origin','*')
     return response
 
-
 if __name__ == "__main__":
     print("Starting Python Flask Server for Sports Person Classifier")
     util.load_saved_artifacts()
