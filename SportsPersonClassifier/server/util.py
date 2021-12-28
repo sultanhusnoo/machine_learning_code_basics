@@ -29,7 +29,11 @@ def classify_image(image_base64_data, file_path=None):
 
         final = combined_img.reshape(1, len_image_array).astype(float)
 
-        result.append(class_number_to_name(__model.predict(final)[0]))
+        result.append({
+            'class': class_number_to_name(__model.predict(final)[0]),
+            'class_probability': np.round(__model.predict_proba(final)*100,2).tolist()[0],
+            'class_dictionary': __class_name_to_number
+        })
 
     return result
 
@@ -80,6 +84,19 @@ def get_b64_test_image_for_yuliya_levchenko():
     with open("b64.txt") as f:
         return f.read()
 
+def get_b64_1_test_image_for_lionel_messi():
+    with open("b64_1.txt") as f_1:
+        return f_1.read()
+
+def get_b64_2_test_image_for_maria_sharapova():
+    with open("b64_2.txt") as f_2:
+        return f_2.read()
+
 if __name__ == '__main__':
     load_saved_artifacts()
-    print(classify_image(get_b64_test_image_for_yuliya_levchenko(),None))
+    #print(classify_image(get_b64_test_image_for_yuliya_levchenko(),None))
+    #print(classify_image(get_b64_1_test_image_for_lionel_messi(),None))
+    #print(classify_image(get_b64_2_test_image_for_maria_sharapova(),None))
+    #print(classify_image(None,'./test_images/roger1.jpg'))
+    #print(classify_image(None,'./test_images/virat1.jpg'))
+    print(classify_image(None,'./test_images/virat2.jpg'))
