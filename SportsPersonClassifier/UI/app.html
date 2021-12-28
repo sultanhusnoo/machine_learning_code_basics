@@ -18,8 +18,8 @@
         </nav>
 
         <div class='container pt-3'>
-            <div class = 'row'>
-                <div class = 'col card-wrapper' data-player='yuliya-levchenko'>
+            <div class = 'row'>         <!Banners of each player etc>
+                <div class = 'col card-wrapper' data-player='yuliya_levchenko'>
                     <div class = 'card border-0'>
                         <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
                             <img class = 'w-100 h-100' src='./images/yuliya.jpeg' alt = 'Card image Cap'>        
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </div>
-                <div class = 'col card-wrapper' data-player='lionel-messi'>
+                <div class = 'col card-wrapper' data-player='lionel_messi'>
                     <div class = 'card border-0'>
                         <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
                             <img class = 'w-100 h-100' src='./images/messi.jpeg' alt = 'Card image Cap'>        
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class = 'col card-wrapper' data-player='maria-sharapova'>
+                <div class = 'col card-wrapper' data-player='maria_sharapova'>
                     <div class = 'card border-0'>
                         <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
                             <img class = 'w-100 h-100' src='./images/sharapova.jpeg' alt = 'Card image Cap'>        
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-                <div class = 'col card-wrapper' data-player='virat-kohli'>
+                <div class = 'col card-wrapper' data-player='virat_kohli'>
                     <div class = 'card border-0'>
                         <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
                             <img class = 'w-100 h-100' src='./images/virat.jpeg' alt = 'Card image Cap'>        
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-                <div class = 'col card-wrapper' data-player='roger-federer'>
+                <div class = 'col card-wrapper' data-player='roger_federer'>
                     <div class = 'card border-0'>
                         <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
                             <img class = 'w-100 h-100' src='./images/federer.jpeg' alt = 'Card image Cap'>        
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class = 'col card-wrapper' data-player='serena-williams'>
+                <div class = 'col card-wrapper' data-player='serena_williams'>
                     <div class = 'card border-0'>
                         <div class = 'position-relative rounded-circle overflow-hidden mx-auto custom-circle-image'>
                             <img class = 'w-100 h-100' src='./images/serena.jpeg' alt = 'Card image Cap'>        
@@ -95,7 +95,7 @@
         
             <div class = 'row'>
 
-                <div class = 'col-sm-4'>
+                <div class = 'col-sm-4'>            <!Dropzone and button>
                     <div class = 'row'>
                         <div class = 'col-12 mx-auto'>
                             <form action = '/file-upload' class = 'dropzone' id='dropzone'>
@@ -113,14 +113,14 @@
                     </div>
                 </div>
 
-                <div class = 'col-sm-8' id='error'>
-                    <p>Can't classify image. Classifier was not able to detect a face and two eyes.</p>
+                <div class = 'col-sm-8' id='error'> <!Error message>
+                    <h3><p><b>Can't classify image. Classifier was not able to detect a face and two eyes.</b></p></h3>
                 </div>
 
-                <div class='col-sm-4' id='resultsholder'>
+                <div class='col-sm-4' id='resultHolder'>   <!Place for results>
                 </div>
 
-                <div class = 'col-sm-4' id='divClassTable'>
+                <div class = 'col-sm-4' id='divClassTable'> <!Table of probability scores>
                     <table id='classTable'>
                         <tr>    <th>Player</th>     <th>Probability Score</th>  </tr>
                         <tr>    <td>Yuliya Levchenko</td>   <td id='score_yuliya_levchenko'></td></tr>
@@ -135,5 +135,11 @@
         </div>
 
     </body>
+
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./dropzone.min.js"></script>
+<script src="./app.js"></script>
 
 </html>
