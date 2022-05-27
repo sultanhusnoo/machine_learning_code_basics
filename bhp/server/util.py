@@ -40,7 +40,7 @@ def load_saved_artifacts():
     print("Loading artifacts.....Done!")
 
 if __name__ == "__main__":
-    util.load_saved_artifacts()
+    load_saved_artifacts()
     print(get_location_names())
     print(get_estimated_price('1st Phase JP Nagar',1000,3,3))
     print(get_estimated_price('1st Phase JP Nagar',1000,5,1))
